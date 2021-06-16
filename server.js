@@ -27,7 +27,7 @@ contentType = mimeTypes[extname] || 'application/octect-stream';
 
 fs.readFile(filePath, function(error, content) {
     if (error) {                        
-        if(error.code == 'ENOENT'){   //if we get a ENOENT error, we'll reply with  404 error
+        if(error.code == 'ENOENT'){   //if we get a ENOENT/NO ENTRY error, we'll reply with  404 error
             fs.readFile('./404.html', function(error, content) {
                 response.writeHead(200, { 'Content-Type': contentType });
                 response.end(content, 'utf-8');

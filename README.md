@@ -2,4 +2,4 @@
 
 #### npm init
 #### npm install nodemon
-### nodemon server
+#### nodemon server

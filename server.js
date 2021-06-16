@@ -5,8 +5,8 @@ var path = require('path');
 http.createServer(function (request, response) {  // our server object listens at port 3000!
 console.log('request ', request.url);
 
-var filePath = '.' + request.url; //fix URL request if it does not specify a file
-if (filePath == './') //example URL hamsters.org will be interpreted as hamsters.org/index.html
+var filePath = '.' + request.url; //fix URL request if it does not specify a file. Example: URL hamsters.org will be interpreted as hamsters.org/index.html
+if (filePath == './') 
     filePath = './index.html';
 
 var extname = String(path.extname(filePath)).toLowerCase();
